@@ -1,3 +1,11 @@
+/********************************************************************
+fracArrayClient.h
+------------
+By: Jessica Pagan Sanchez       August 22, 2013
+
+.cpp file given, with the main function, to test the class functions.
+********************************************************************/
+
 #include <iostream>
 #include "fracArray.h"
 using namespace std ;

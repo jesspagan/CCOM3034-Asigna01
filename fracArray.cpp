@@ -189,7 +189,7 @@ bool Fraction::gt(const Fraction& F) const{
 
     if(r1 > r2)
         return true;
-    else
+    else 
         return false;
 }
 
@@ -278,6 +278,13 @@ void sort(Fraction A[], int size) {
     }
 }
 
+//-------------------------------------------------------------------
+// funtion ArrayOfFractions
+//  Default Constructor that assigns random numbers to the array,
+//  when an object of the class ArrayOfFractions is created.
+//  Return/post-condition:
+//   -- an array with 10 random Fraction objects
+//-------------------------------------------------------------------
 ArrayOfFractions::ArrayOfFractions() {
 
     for(int i = 0 ; i < 10 ; i++) {
@@ -286,15 +293,40 @@ ArrayOfFractions::ArrayOfFractions() {
     }
 }
 
+//-------------------------------------------------------------------
+// funtion sortAscending
+//  Given an ArrayOfFraction object, it will use the class
+//  function "sort" to organize the array in ascending order.
+//  Parameters:
+//   -- A: the array as reference
+//  Return/post-condition:
+//   -- array of objects organized in ascending order
+//-------------------------------------------------------------------
 void ArrayOfFractions::sortAscending() {
     sort(A , 10) ; 
 }
 
+//-------------------------------------------------------------------
+// funtion print
+//  Given an ArrayOfFraction object, it will use the class
+//  function "print" to display the objects of the array on screen.
+//  Parameters
+//   -- A: the array as reference
+//-------------------------------------------------------------------
 void ArrayOfFractions::print() {
     for(int i = 0; i < 10; i++)
         A[i].print() ;
 }
 
+//-------------------------------------------------------------------
+// funtion min
+//  Given an ArrayOfFraction object, it will use the class
+//  function "gt" to find the smallest fraction in the array.
+//  Parameters:
+//   -- A: the array as reference
+//  Return/post-condition:
+//   -- an Fraction object containing the smallest fraction
+//-------------------------------------------------------------------
 Fraction ArrayOfFractions::min() const{
     Fraction minim = A[0] ;
     bool b ;
@@ -309,6 +341,15 @@ Fraction ArrayOfFractions::min() const{
     return minim ;
 }
 
+//-------------------------------------------------------------------
+// funtion max
+//  Given an ArrayOfFraction object, it will use the class
+//  function "gt" to find the greatest fraction in the array.
+//  Parameters:
+//   -- A: the array as reference
+//  Return/post-condition:
+//   -- an Fraction object containing the greatest fraction
+//-------------------------------------------------------------------
 Fraction ArrayOfFractions::max() const{
     Fraction maxim = A[0] ;
     bool b ;
@@ -319,10 +360,19 @@ Fraction ArrayOfFractions::max() const{
             maxim.setDenom(A[i].getDenom());
         }
     }
-
     return maxim ;
 }
 
+//-------------------------------------------------------------------
+// funtion sum
+//  Given an ArrayOfFraction object, it will use the class
+//  function "sumFrac" to find the the total sum of all the fractions
+//  in the array.
+//  Parameters:
+//   -- A: the array as reference
+//  Return/post-condition:
+//   -- an Fraction object containing the total of the sum
+//-------------------------------------------------------------------
 Fraction ArrayOfFractions::sum() const{
     Fraction r;
 
